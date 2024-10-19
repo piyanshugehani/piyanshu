@@ -1,0 +1,23 @@
+.shimmer-btn {
+    background: linear-gradient(90deg, #1c1c1c 25%, #000000 50%, #1c1c1c 75%);
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite linear;
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    color: white;
+    border-radius: 25px;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
