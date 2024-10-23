@@ -10,6 +10,7 @@ import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import './Shimmer.css'
+import { DownloadCloud, File } from "lucide-react";
 
 const About = () => {
   return (
@@ -76,7 +77,7 @@ const About = () => {
   </a>
 </div>
 <button className="shimmer-btn font-semibold" onClick={() => window.open('https://drive.google.com/file/d/1NSHwIiueM_N2fTJE-BGYhIISzB3nF4gK/view?usp=drive_link', '_blank')}>
-      View Resume
+    View Resume<DownloadCloud className="float-right ml-2"/>
     </button>
     </>
   );
