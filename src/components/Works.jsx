@@ -75,11 +75,12 @@ const Works = () => {
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
-      <div className='mt-20 flex flex-wrap gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
-      </div>
+      <div className='mt-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10'>
+    {projects.map((project, index) => (
+        <ProjectCard key={`project-${index}`} index={index} {...project} />
+    ))}
+</div>
+
     </>
   );
 };

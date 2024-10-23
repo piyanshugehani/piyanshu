@@ -73,6 +73,7 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <p className="text-gray-700">open for freelance work as well!</p>
 
         <form
           ref={formRef}
