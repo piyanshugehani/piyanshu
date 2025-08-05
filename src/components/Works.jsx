@@ -19,18 +19,18 @@ const ProjectCard = ({
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className='bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full'
+        tiltMaxAngleX={45}
+        tiltMaxAngleY={45}
+        scale={1}
+        transitionSpeed={450}
+        className='bg-tertiary p-5 rounded-2xl w-full max-w-[360px] mx-auto'
       >
         <div className='relative w-full h-[230px]'>
           <img
             src={image}
             alt='project_image'
             className='w-full h-full object-cover rounded-2xl'
+            loading="lazy"
           />
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
@@ -75,12 +75,17 @@ const Works = () => {
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
 
-      <div className='mt-20 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-10'>
-    {projects.map((project, index) => (
-        <ProjectCard key={`project-${index}`} index={index} {...project} />
-    ))}
-</div>
-
+      <div className='mt-20 w-full'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center'>
+          {projects.map((project, index) => (
+            <ProjectCard 
+              key={`project-${index}`} 
+              index={index} 
+              {...project} 
+            />
+          ))}
+        </div>
+      </div>
     </>
   );
 };

@@ -2,7 +2,23 @@ import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// Import experiences array and add new freelance experience
 import { experiences } from "../constants";
+
+const updatedExperiences = [
+  {
+    title: "React Developer (Freelance)",
+    company_name: "Dazzle Consultancy",
+    date: "Jan 2025 - April 2025",
+    points: [
+      "Delivered a modern consultancy website with engaging Framer Motion and GSAP animations",
+      "Built with Next.js and integrated SMTP email functionality",
+      "Implemented responsive design and cross-browser compatibility", 
+      "Managed entire project lifecycle from requirements and designing to deployment, and collaborated closely with founder to understand product ecosystem and align website with business goals",
+    ]
+  },
+  ...experiences
+];
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,10 +78,10 @@ const ExperienceCard = ({ experience, index }) => {
   return (
     <div
       ref={cardRef}
-      className="relative bg-[#1b1919] p-6 rounded-lg shadow-2xl mb-10 border border-gray-700"
+      className="relative bg-[#1b1919] p-6 rounded-lg shadow-2xl mb-10 border border-gray-700" 
+      id="work"
     >
       <div className="flex items-center">
-        
         <div>
           <h3 className="text-white text-xl font-bold">{experience.title}</h3>
           <p className="text-secondary text-md">{experience.company_name}</p>
@@ -112,7 +128,7 @@ const Experience = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden py-40">
       {/* Background Glow Effects */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20 animate-pulse" />
@@ -135,7 +151,7 @@ const Experience = () => {
 
       {/* Timeline Content */}
       <div className="relative mx-auto max-w-4xl">
-        {experiences.map((experience, index) => (
+        {updatedExperiences.map((experience, index) => (
           <ExperienceCard key={index} experience={experience} index={index} />
         ))}
       </div>

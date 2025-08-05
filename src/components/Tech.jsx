@@ -7,20 +7,24 @@ import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "@/utils/motion";
 import { styles } from "../styles";
 
+// Ensure each category exists in technologies before adding to tech array
 const tech = [
-  technologies.languages,
-  technologies.frameworks,
-  technologies.libraries,
-  technologies.databases,
-  technologies.tools,
-  technologies.environments,
+  technologies.languages || [],
+  technologies.frameworks || [],
+  technologies.libraries || [],
+  technologies.databases || [],
+  technologies.aiml || [], // Added AI/ML category with fallback
+  technologies.tools || [],
+  technologies.environments || [],
+  // technologies.datascince || [], // Added Data Science category with fallback
 ];
 
 const techVariants = [
   "Languages",
   "Frameworks",
-  "Libraries",
+  "Libraries", 
   "Databases",
+  "AI/ML & Data",
   "Tools",
   "Environments",
 ];
@@ -36,22 +40,22 @@ function Tech() {
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
       >
-        {technology.map((tech, index) => (
+        {Array.isArray(technology) && technology.map((tech, index) => (
           <Link
-            to={tech.link} // Using `to` for react-router-dom
-            key={tech.name}
-            target="_blank"
+            to={tech.link || '#'}
+            key={tech.name || `tech-${index}`}
+            target="_blank" 
             className="flex flex-row"
           >
             <div className="w-[40px] h-[40px] relative flex flex-row items-center group cursor-pointer">
               <img
                 src={tech.icon}
-                alt={tech.name}
+                alt={tech.name || ''}
                 className="object-contain w-full h-full"
               />
 
               <div className="opacity-0 w-fit min-w-[80px] bg-bgPrimaryLight dark:bg-bgPrimaryDark text-ctnPrimaryLight dark:text-ctnPrimaryDark text-center text-xs rounded-lg py-2 absolute z-10 group-hover:opacity-100 px-3 -top-3/4 -left-1/3 pointer-events-none">
-                {tech.name}
+                {tech.name || ''}
               </div>
             </div>
           </Link>
@@ -67,7 +71,7 @@ function Tech() {
   ));
 
   return (
-    <section className="w-full h-fit p-8 mt-20" id="skills">
+    <section className="w-full h-fit " id="skills">
       <motion.div
         variants={textVariant()}
         initial="hidden"
@@ -75,9 +79,6 @@ function Tech() {
         viewport={{ once: true, amount: 0.25 }}
         className="text-center mx-auto"
       >
-        <p className={`${styles.sectionSubText} text-center`}>
-          What I have learnt so far
-        </p>
         <h2 className={`${styles.sectionHeadText} text-center`}>
           Skills
         </h2>
@@ -99,7 +100,7 @@ function Tech() {
         >
           {techNames}
         </motion.div>
-        <div className="w-[2px] h-[400px] dark:bg-ctnSecondaryDark bg-ctnSecondaryLight rounded-lg md:flex hidden mx-8" />
+        <div className="w-[2px] h-[450px] dark:bg-ctnSecondaryDark bg-ctnSecondaryLight rounded-lg md:flex hidden mx-8" />
         <div className="md:w-[80%] w-full pl-2 h-full flex flex-col gap-8">
           {languages}
         </div>

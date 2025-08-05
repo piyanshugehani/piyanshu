@@ -4,17 +4,15 @@ import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
 
 const heroTexts = [
-  "Web Developer",
+  "Full Stack Web Developer",
   500,
-  "Web Designer",
+  "Mobile App Developer",
   500,
-  "Full Stack Developer",
-  500,
-  "Software Developer",
+  "Software Engineer",
   500,
   "Python Developer",
   500,
-  "GenAI & Data Enthusiast",
+  "AI & ML Developer",
   500,
 ];
 

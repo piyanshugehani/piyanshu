@@ -215,19 +215,67 @@ const technologies = {
       link: "https://www.mongodb.com/",
     },
   ],
+  aiml: [
+    {
+      name: "NumPy",
+      icon: "/assets/tech/numpy.svg",
+      link: "https://numpy.org/",
+    },
+    {
+      name: "Pandas",
+      icon: "/assets/tech/pandas.svg", 
+      link: "https://pandas.pydata.org/",
+    },
+    {
+      name: "scikit-learn",
+      icon: "/assets/tech/scikit-learn.svg",
+      link: "https://scikit-learn.org/",
+    },
+    {
+      name: "Seaborn",
+      icon: "/assets/tech/seaborn.svg",
+      link: "https://seaborn.pydata.org/",
+    },
+    {
+      name: "PyTorch",
+      icon: "/assets/tech/pytorch.svg",
+      link: "https://pytorch.org/",
+    },
+    {
+      name: "TensorFlow",
+      icon: "/assets/tech/tensorflow.svg",
+      link: "https://www.tensorflow.org/",
+    },
+    {
+      name: "Transformers",
+      icon: "/assets/tech/transformers.png",
+      link: "https://huggingface.co/docs/transformers/",
+    },
+    {
+      name: "LangChain",
+      icon: "/assets/tech/langchain.svg",
+      link: "https://www.langchain.com/",
+    },
+    {
+      name: "OpenCV",
+      icon: "/assets/tech/opencv.svg",
+      link: "https://opencv.org/",
+    }
+  ]
 };
 
 const experiences = [
   {
-    title: "Lead Developer Intern",
+    title: "Lead Software Developer Engineer",
     company_name: "KothariTech Pvt Ltd",
     // icon: kotharitech, // You might need to provide this icon or adjust accordingly
     iconBg: "#383E56",
     date: "June 2024 - August 2024",
     points: [
-      "Developed a production-ready website using React and Redux within a month with Vercel and GitLab CI/CD.",
-      "Integrated and displayed API data on the frontend, ensuring seamless communication with the backend.",
-      "Coordinated with developer interns to ensure smooth project execution and timely delivery."
+      "Solely developed Lofaz's seller and admin panels using React.js, Redux Toolkit, and Material-UI, supporting 3000+ active users",
+      "Integrated 25+ data pipelines and implemented OTP-based login via Firebase, improving system reliability by 40% with features like pagination and URL syncing",
+      "Built live analytics dashboard using Recharts and Thunk Middleware with loading skeletons and periodic API polling for real-time stats, and optimized product catalog views with MUI tables and advanced filtering capabilities to handle high monthly order volumes",
+      "Reduced load times by 55% through bug fixes, lazy-loading implementation, and API call optimization while managing agile sprints via Slack and GitLab"
     ],
   },
   {
@@ -272,28 +320,119 @@ const testimonials = [
   },
 ];
 const projects = [
-  {
-    name: "PetSmart",
+{
+    name: "Gyaansarthi.ai",
     description:
-      "An all-in-one app that simplifies pet ownership by providing intuitive pet profiles, booking vet appointments, tracking pet locations, and finding nearby pet stores.",
+      "EdConnect platform enabling volunteer-student connections with live video sessions, interactive whiteboards, and recommendation engine, and an automated meeting notes generation.",
     tags: [
       {
-        name: "node",
+        name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongoose",
+        name: "flask",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "mongodb",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "zegocloud",
+        color: "yellow-text-gradient",
+      },
+    ],
+    image: '/assets/proj/gyaansarthi.png',
+    source_code_link: "https://github.com/piyanshugehani/ubs-hack",
+  },
+{
+    name: "CARE - Critical AI Response Engine App",
+    description:
+      "Built an emergency response system (mobile app) with WebSocket integration, map-based tracking and real-time emergency analytics.",
+    tags: [
+      {
+        name: "react-native",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "fastapi",
+        color: "green-text-gradient",
+      },
+      {
+        name: "postgresql",
         color: "pink-text-gradient",
       },
     ],
-    image: '/assets/proj/pet.png', // Replace with your actual image variable
-    source_code_link: "https://github.com/piyanshugehani/petSmart", // Add your actual link here
+    image: '/assets/proj/care.png',
+    source_code_link: "https://github.com/piyanshugehani/care",
   },
   {
+    name: "Lofaz Sellers",
+    description:
+      "A robust e-commerce platform developed for a startup, offering comprehensive solutions for product management, order handling, and sales analytics, similar to Shopify.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "rest-framework",
+        color: "green-text-gradient",
+      },
+      {
+        name: "postgres",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: '/assets/proj/lofaz.png', // Replace with your actual image variable
+    source_code_link: "https://seller.lofaz.com", // Add your actual link here
+  },
+   {
+    name: "AI-PrepGem",
+    description:
+      "An AI-driven interviewer platform for students and professionals to practice real-time interviews tailored to specific roles, with instant feedback and detailed performance analysis.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "clerk",
+        color: "green-text-gradient",
+      },
+      {
+        name: "drizzle",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: '/assets/proj/prepgem.png', // Replace with your actual image variable
+    source_code_link: "https://github.com/piyanshugehani/AI-PrepGem", // Add your actual link here
+  },
+  {
+    name: "Dazzle Consultancy",
+    description: "A freelance project delivering a modern consultancy website with engaging Framer Motion and GSAP animations, built with Next.js and integrated SMTP email functionality.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient"
+      },
+      {
+        name: "framer",
+        color: "green-text-gradient"
+      },
+      {
+        name: "gsap",
+        color: "pink-text-gradient"
+      },
+      {
+        name: "vercel",
+        color: "yellow-text-gradient"
+      }
+    ],
+    image: "/assets/proj/dazzle.png", // Replace with your actual image variable
+    source_code_link: "https://www.dazzleconsultancy.com/" // Add your actual link here
+  },
+   {
     name: "SplitIt",
     description:
       "An open-source Progressive Web App designed to simplify expense management with features like unequal/equal splitting, expense tracking, and integrated payment gateways.",
@@ -319,46 +458,53 @@ const projects = [
     source_code_link: "https://github.com/piyanshugehani/SplitIt", // Add your actual link here
   },
   {
-    name: "Lofaz Sellers",
+    name: "PetSmart",
     description:
-      "A robust e-commerce platform developed for a startup, offering comprehensive solutions for product management, order handling, and sales analytics, similar to Shopify.",
+      "An all-in-one app that simplifies pet ownership by providing intuitive pet profiles, booking vet appointments, tracking pet locations, and finding nearby pet stores.",
     tags: [
       {
-        name: "react",
+        name: "node",
         color: "blue-text-gradient",
       },
       {
-        name: "rest-framework",
+        name: "mongoose",
         color: "green-text-gradient",
       },
       {
-        name: "postgres",
+        name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: '/assets/proj/lofaz.png', // Replace with your actual image variable
-    source_code_link: "https://seller.lofaz.com", // Add your actual link here
+    image: '/assets/proj/pet.png', // Replace with your actual image variable
+    source_code_link: "https://github.com/piyanshugehani/petSmart", // Add your actual link here
   },
-  {
-    name: "AI-PrepGem",
+ 
+  
+ 
+{
+    name: "Hybrid API Logs Classification",
     description:
-      "An AI-driven interviewer platform for students and professionals to practice real-time interviews tailored to specific roles, with instant feedback and detailed performance analysis.",
+      "A hybrid log classification system using Regex, BERT, and LLM-based prompts to classify structured and ambiguous logs.",
     tags: [
       {
-        name: "nextjs",
+        name: "fastapi",
         color: "blue-text-gradient",
       },
       {
-        name: "clerk",
+        name: "bert",
         color: "green-text-gradient",
       },
       {
-        name: "drizzle",
+        name: "llama",
         color: "pink-text-gradient",
       },
+      {
+        name: "streamlit",
+        color: "yellow-text-gradient",
+      },
     ],
-    image: '/assets/proj/prepgem.png', // Replace with your actual image variable
-    source_code_link: "https://github.com/piyanshugehani/AI-PrepGem", // Add your actual link here
+    image: '/assets/proj/api.png',
+    source_code_link: "https://github.com/piyanshugehani/hybrid-logs-classification",
   },
   {
     name: "Resto",
@@ -381,26 +527,7 @@ const projects = [
     image: '/assets/proj/resto.png', // Replace with your actual image variable
     source_code_link: "https://github.com/piyanshugehani/Restro", // Add your actual link here
   },
-  {
-    "name": "Sentiment Analysis of Amazon Reviews",
-    "description": "Analyzing the sentiment of Amazon reviews, utilizing ML models to classify reviews as positive, negative, or neutral.",
-    "tags": [
-      {
-        "name": "flask",
-        "color": "blue-text-gradient"
-      },
-      {
-        "name": "ML",
-        "color": "green-text-gradient"
-      },
-      {
-        "name": "NLP",
-        "color": "pink-text-gradient"
-      }
-    ],
-    "image": "/assets/proj/sentiment.png", // Replace with your actual image variable
-    "source_code_link": "https://github.com/piyanshugehani/sentiment_analysis_amazon_reviews" // Add your actual link here
-  }
+  
   
 ];
 
