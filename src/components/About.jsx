@@ -24,7 +24,7 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        A results-driven software developer focused on building scalable solutions for growing businesses. I leverage my expertise in full-stack development and modern technologies like React/Next, JavaScript/TypeScript, and Python to create robust, high-performance applications that can handle increasing user demands. With a strong foundation in system architecture and optimization, I help products scale efficiently while maintaining code quality and user experience. My goal is to develop sustainable technical solutions that enable businesses to grow and succeed in the competitive tech landscape.
+        A results-driven software developer focused on building scalable solutions for growing businesses. I leverage my expertise in full-stack development and modern technologies like React/Next, JavaScript/TypeScript, and Python to create robust, high-performance applications that can handle increasing user demands. With a strong foundation in system architecture and optimization, I help products scale efficiently while maintaining code quality and user experience. I also enjoy problem-solving and hold a 1800+ LeetCode rating, ranking in the top 7% globally. Apart from this, I've won multiple national hackathons. My goal is to develop sustainable technical solutions that enable businesses to grow and succeed in the competitive tech landscape.
       </motion.p>
 
       <div className="flex gap-3 my-4 items-center">

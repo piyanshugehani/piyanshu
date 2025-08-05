@@ -1,15 +1,12 @@
 import React from "react";
 import Tilt from 'react-parallax-tilt';
-import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { github } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
-import { fadeIn, textVariant } from "../utils/motion";
 
 const ProjectCard = ({
-  index,
   name,
   description,
   tags,
@@ -17,7 +14,7 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <div>
       <Tilt
         tiltMaxAngleX={45}
         tiltMaxAngleY={45}
@@ -30,7 +27,6 @@ const ProjectCard = ({
             src={image}
             alt='project_image'
             className='w-full h-full object-cover rounded-2xl'
-            loading="lazy"
           />
 
           <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
@@ -63,24 +59,23 @@ const ProjectCard = ({
           ))}
         </div>
       </Tilt>
-    </motion.div>
+    </div>
   );
 };
 
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <div>
         <p className={`${styles.sectionSubText} `}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
-      </motion.div>
+      </div>
 
       <div className='mt-20 w-full'>
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center'>
           {projects.map((project, index) => (
             <ProjectCard 
               key={`project-${index}`} 
-              index={index} 
               {...project} 
             />
           ))}
