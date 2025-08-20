@@ -86,8 +86,8 @@ const About = () => {
           
         </div>
         
-        <div className="md:w-1/2 bg-transparent border border-1 border-white p-6 flex flex-col items-center rounded-lg">
-          <div className="w-96 h-96 overflow-hidden mb-8 rounded-2xl bg-tertiary/30 shadow-xl border border-white/10 backdrop-blur-sm hover:scale-[1.02] transition-transform duration-300">
+        <div className="md:w-1/2 w-full bg-transparent border border-1 border-white p-4 md:p-6 flex flex-col items-center rounded-lg">
+          <div className="w-full md:w-96 h-72 md:h-96 overflow-hidden mb-6 md:mb-8 rounded-2xl bg-tertiary/30 shadow-xl border border-white/10 backdrop-blur-sm hover:scale-[1.02] transition-transform duration-300">
             <img 
               src={profile} 
               alt="Profile Picture" 
@@ -95,7 +95,7 @@ const About = () => {
             />
           </div>
           
-          <div className="grid grid-cols-2 gap-4 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 w-full">
             <div className="bg-tertiary p-4 rounded-lg">
               <div className="flex items-center text-white mb-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
