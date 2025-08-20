@@ -51,7 +51,7 @@ const ExperienceCard = ({ experience, index }) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      const xPercent = (x / rect.width) * 2 - 1; // -1 to 1
+      const xPercent = (x / rect.width) * 2 - 1;
       const yPercent = (y / rect.height) * 2 - 1;
 
       gsap.to(card, {
@@ -78,19 +78,20 @@ const ExperienceCard = ({ experience, index }) => {
   return (
     <div
       ref={cardRef}
-      className="relative bg-[#1b1919] p-6 rounded-lg shadow-2xl mb-10 border border-gray-700" 
+      className="relative bg-[#1b1919] p-4 rounded-2xl shadow-2xl mb-16 border border-gray-700 
+                 hover:shadow-blue-500/20 transition-all duration-300
+                 sm:p-10 md:p-12 lg:w-[100%] lg:mx-auto
+                 xl:w-[100%] 2xl:w-[100%]" 
       id="work"
     >
-      <div className="flex items-center">
-        <div>
-          <h3 className="text-white text-xl font-bold">{experience.title}</h3>
-          <p className="text-secondary text-md">{experience.company_name}</p>
-        </div>
+      <div className="flex flex-col gap-2 sm:gap-3">
+        <h3 className="text-white text-xl font-bold sm:text-2xl">{experience.title}</h3>
+        <p className="text-secondary text-md sm:text-lg">{experience.company_name}</p>
+        <p className="text-white text-sm sm:text-base">{experience.date}</p>
       </div>
-      <p className="mt-4 text-white text-sm">{experience.date}</p>
-      <ul className="mt-4 space-y-2 pl-4 list-disc text-white">
+      <ul className="mt-6 space-y-3 pl-5 list-disc text-white sm:mt-8">
         {experience.points.map((point, index) => (
-          <li key={index} className="text-sm tracking-wide">
+          <li key={index} className="text-sm tracking-wide sm:text-base">
             {point}
           </li>
         ))}
@@ -116,10 +117,10 @@ const Experience = () => {
       lineRef.current,
       { height: "0%" },
       {
-        height: "100%",
+        height: "90%",
         scrollTrigger: {
           trigger: lineRef.current.parentElement,
-          start: "top top",
+          start: "top 20%",
           end: "bottom bottom",
           scrub: true,
         },
@@ -128,15 +129,15 @@ const Experience = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden py-40">
+    <div className="relative overflow-hidden py-20 sm:py-32 md:py-24">
       {/* Background Glow Effects */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20 animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20 animate-pulse" />
+        <div className="absolute top-1/4 left-1/3 w-72 h-72 sm:w-96 sm:h-96 bg-blue-500 rounded-full filter blur-3xl opacity-20 animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/3 w-72 h-72 sm:w-96 sm:h-96 bg-purple-500 rounded-full filter blur-3xl opacity-20 animate-pulse" />
       </div>
 
       {/* Glowing Vertical Line */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-full">
+      <div className="absolute top-[20%] left-1/2 transform -translate-x-1/2 w-1 h-[80%]">
         <div
           ref={lineRef}
           className="w-full h-0 bg-gradient-to-b from-blue-400 to-purple-500 rounded-full shadow-lg"
@@ -144,14 +145,14 @@ const Experience = () => {
       </div>
 
       {/* Section Title */}
-      <div className="text-center mb-10">
-        <h2 className="text-4xl font-bold text-white">Work Experience</h2>
-        <p className="text-secondary text-lg">What I have done so far</p>
+      <div className="text-center mb-16 sm:mb-20">
+        <h2 className="text-3xl sm:text-4xl font-bold text-white">Work Experience</h2>
+        <p className="text-secondary text-base sm:text-lg mt-2">What I have done so far</p>
       </div>
 
       {/* Timeline Content */}
-      <div className="relative mx-auto max-w-4xl">
-        {updatedExperiences.map((experience, index) => (
+      <div className="relative mx-auto max-w-7xl px-6 sm:px-8">
+        {[...updatedExperiences].map((experience, index) => (
           <ExperienceCard key={index} experience={experience} index={index} />
         ))}
       </div>

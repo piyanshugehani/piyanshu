@@ -39,6 +39,10 @@ export const navLinks = [
     title: "Skills",
   },
   {
+    id: "achievements",
+    title: "Achievements",
+  },
+  {
     id: "contact",
     title: "Contact",
   },
@@ -266,7 +270,7 @@ const technologies = {
 
 const experiences = [
   {
-    title: "Lead Software Developer Engineer",
+    title: "Lead Software Developer Engineer (Hybrid)",
     company_name: "KothariTech Pvt Ltd",
     // icon: kotharitech, // You might need to provide this icon or adjust accordingly
     iconBg: "#383E56",
@@ -279,7 +283,7 @@ const experiences = [
     ],
   },
   {
-    title: "Web Development Intern",
+    title: "Web Development (Internship)",
     company_name: "Cognifyz Technologies",
     // icon: cognifyz, // Adjust accordingly for the icon
     iconBg: "#E6DEDD",
